@@ -15,7 +15,7 @@ function PublicRoute({
             ? (
               <Redirect
                 to={{
-                  pathname: '/finder',
+                  pathname: '/user',
                   state: { from: location }
                 }}
               />
