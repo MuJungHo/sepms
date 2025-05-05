@@ -9,7 +9,7 @@ import {
 const Layout = () => {
   // const { t } = useContext(GlobalContext);
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', width: '100%', height: '100%', justifyContent: 'space-between' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', width: '100%', height: '100%', justifyContent: 'space-between', padding: 20 }}>
       <div style={{ display: 'flex', width: '100%', height: "calc(33% - 12px)" }}>
         <Paper style={{ width: '100%', height: '100%' }} />
       </div>

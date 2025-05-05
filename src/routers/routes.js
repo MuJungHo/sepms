@@ -1,7 +1,10 @@
-// import User from '../Views/User';
+import Layout from '../Views/Layout';
+import Input from '../Views/Input';
+import Feedback from '../Views/Feedback';
+import Navigation from '../Views/Navigation';
 
-import Finder from "../Views/Finder";
 import User from "../Views/User";
+import Finder from "../Views/Finder";
 import Setting from "../Views/Setting";
 import Device from "../Views/Device";
 
@@ -26,7 +29,8 @@ import {
   DataTable,
   TravelExplore,
   Settings,
-  Detector
+  Detector,
+  Tools
 } from "../images/icons";
 
 
@@ -38,6 +42,50 @@ const routes = [
     icon: ManageAccount,
     sider: true,
     exact: true
+  },
+  {
+    path: "/component",
+    name: "_component",
+    sider: true,
+    icon: Tools,
+    children: [
+      {
+        path: "/layout",
+        name: "_layout",
+      },
+      {
+        path: "/input",
+        name: "_input",
+      },
+      {
+        path: "/feedback",
+        name: "_feedback",
+      },
+      {
+        path: "/navigation",
+        name: "_navigation",
+      },
+    ]
+  },
+  {
+    path: "/layout",
+    name: "_layout",
+    component: Layout,
+  },
+  {
+    path: "/input",
+    name: "_input",
+    component: Input,
+  },
+  {
+    path: "/feedback",
+    name: "_feedback",
+    component: Feedback,
+  },
+  {
+    path: "/navigation",
+    name: "_navigation",
+    component: Navigation,
   },
   {
     path: "/finder",

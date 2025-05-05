@@ -22,7 +22,7 @@ import { DateRangePicker, DatePicker } from 'rsuite';
 const Input = () => {
   // const { t } = useContext(GlobalContext);
   return (
-    <>
+    <div style={{ padding: 20 }}>
       <Paper style={{ width: '100%', padding: 16, marginBottom: 20 }}>
         <Text variant="h5">Radio</Text>
         <Divider style={{ margin: '16px 0' }} />
@@ -84,7 +84,7 @@ const Input = () => {
         <DateRangePicker format="yyyy-MM-dd HH:mm:ss" style={{ marginRight: 16 }} placement="auto" />
         <DatePicker placement="auto" />
       </Paper>
-    </>
+    </div>
   );
 }
 

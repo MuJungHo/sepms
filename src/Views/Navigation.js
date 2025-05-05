@@ -24,7 +24,7 @@ import {
 const Navigation = () => {
   // const { t } = useContext(GlobalContext);
   return (
-    <>
+    <div style={{ padding: 20 }}>
       <Paper style={{ width: '100%', padding: 16, marginBottom: 20 }}>
         <Text variant="h5">Breadcrumbs</Text>
         <Divider style={{ margin: '16px 0' }} />
@@ -38,7 +38,7 @@ const Navigation = () => {
           <Typography>Breadcrumb</Typography>
         </Breadcrumbs>
       </Paper>
-    </>
+    </div>
   );
 }
 
