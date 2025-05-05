@@ -9,9 +9,8 @@ import {
 import {
   BorderColorSharp,
   Delete,
-  AddBox,
 } from '@material-ui/icons';
-
+import { Upload, Add } from "../images/icons"
 // import {
 //   Select,
 //   MenuItem
@@ -44,7 +43,7 @@ const User = () => {
     //   sort: filter.sort
     // })
     let { rows, count } = dummyUserList;
-    
+
     const _rows = rows.map(a => ({ ...a, _id: a.id }))
     setAccountList(_rows)
     setTotal(count)
@@ -62,6 +61,13 @@ const User = () => {
   }
 
   const openAddUserDialog = () => {
+    openDialog({
+      title: t("add-thing", { thing: t("user") }),
+      section: <UserSection onConfirm={handleAddUserAccount} />
+    })
+  }
+
+  const openImportUserDialog = () => {
     openDialog({
       title: t("add-thing", { thing: t("user") }),
       section: <UserSection onConfirm={handleAddUserAccount} />
@@ -129,7 +135,8 @@ const User = () => {
         onSortChange={(order, sort) => setFilter({ ...filter, order, sort })}
         onKeywordSearch={(keyword) => setFilter({ ...filter, keyword })}
         toolbarActions={[
-          { name: t('add'), onClick: openAddUserDialog, icon: <AddBox /> },
+          { name: t('add'), onClick: openAddUserDialog, icon: <Add /> },
+          { name: t('upload'), onClick: openImportUserDialog, icon: <Upload /> },
         ]}
         rowActions={[
           { name: t('edit'), onClick: (e, row) => openEditUserDialog(row), icon: <BorderColorSharp /> },
